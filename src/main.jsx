@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { ChakraProvider } from '@chakra-ui/react'
 import { ApolloClient, ApolloProvider, InMemoryCache, gql } from '@apollo/client'
+import { Provider } from 'react-redux'
+import  store  from './store/store.jsx'
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000/',
@@ -11,10 +13,12 @@ const client = new ApolloClient({
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-  <ChakraProvider>
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>
-  </ChakraProvider>
+  <Provider store={store}>
+    <ChakraProvider>
+      <ApolloProvider client={client}>
+        <App />
+      </ApolloProvider>
+    </ChakraProvider>
+  </Provider>
 
 )
