@@ -1,9 +1,9 @@
-import { Flex } from '@chakra-ui/react'
+import { Flex, Text } from '@chakra-ui/react'
 
 function NoId () {
     return (
        <Flex>
-              <h1>Selecciona un ID</h1>
+              <Text fontSize='lg' color='orange.400' fontWeight='semibold'>Aprieta el boton de arriba a la derecha para elegir un ID</Text>
        </Flex>
     )
 }

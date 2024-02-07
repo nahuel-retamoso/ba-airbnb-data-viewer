@@ -1,4 +1,4 @@
-import { Flex, Icon, Spinner } from "@chakra-ui/react";
+import { Flex, Icon, Spinner, Text } from "@chakra-ui/react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { PiMapPinLineDuotone } from 'react-icons/pi';
 
@@ -19,8 +19,9 @@ function Map({latitude, longitude}) {
                         </Marker>
                     </MapContainer>
                 ) : (
-                    <Flex h='full' w='full' border='1px' borderColor='blackAlpha.400' justify='center' align='center' bg='orange.100'>
-                        <Icon h='60px' w='60px' as={PiMapPinLineDuotone} />
+                    <Flex h='full' w='full' border='1px' borderColor='blackAlpha.400' justify='center' align='center' bg='orange.100' direction='column'>
+                        <Icon h='60px' w='60px' as={PiMapPinLineDuotone} color='orange.500'/>
+                        <Text mt='30px' fontSize='xs' color='orange.400'>Elige la opcion "Location" para mostrar la ubicacion en el mapa</Text>
                     </Flex>
                 )}
         </Flex>
