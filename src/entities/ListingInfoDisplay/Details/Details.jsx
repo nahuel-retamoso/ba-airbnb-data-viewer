@@ -8,10 +8,10 @@ function Details ({data, loading, error}) {
 
     return(
         <Flex w='full' h='full'>
-            <Flex direction='column' pl='40px' justify='center' w='50%' h='full' color='blackAlpha.800'>
+            <Flex py='30px' direction='column' pl='40px' justify='center' w='50%' h='full' color='blackAlpha.800'>
                 <Flex fontSize='md' direction='column' w='full' h='90%'>
                     <Text color='orange.400'>ID seleccionado: {id}</Text>
-                    <Text fontSize='lg' mb='3px' textDecoration='underline' color='blackAlpha.700'>Name: {data?.publication.name}</Text>
+                    <Text mb='3px' textDecoration='underline' color='blackAlpha.700'>Name: {data?.publication.name}</Text>
                     <Text mb='3px'>Host ID: {data?.publication.host_id}</Text>
                     <Text mb='3px'>Host Name: {data?.publication.host_name}</Text>
                     <Text mb='3px'>Neighbourhood: {data?.publication.neighbourhood}</Text>

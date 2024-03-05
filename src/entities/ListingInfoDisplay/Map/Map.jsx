@@ -19,7 +19,7 @@ function Map({latitude, longitude}) {
                         </Marker>
                     </MapContainer>
                 ) : (
-                    <Flex h='full' w='full' border='1px' borderColor='blackAlpha.400' justify='center' align='center' bg='orange.100' direction='column'>
+                    <Flex h='400px' w='full' border='1px' borderColor='blackAlpha.400' justify='center' align='center' bg='orange.100' direction='column'>
                         <Icon h='60px' w='60px' as={PiMapPinLineDuotone} color='orange.500'/>
                         <Text mt='30px' fontSize='xs' color='orange.400'>Elige la opcion "Location" para mostrar la ubicacion en el mapa</Text>
                     </Flex>

@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import  store  from './store/store.jsx'
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/',
+  uri: 'https://ba-airbnb-data-backend-1.onrender.com/localhost:4000',
   cache: new InMemoryCache()
 })
 
