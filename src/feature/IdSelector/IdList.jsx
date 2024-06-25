@@ -34,7 +34,7 @@ function IdList() {
                     </Button>
                 )
             }
-            ) : <Flex direction='column' justify='center' align='center' h='full'><Spinner color='red.500' /> <Text fontFamily={'fantasy'} mt='10'>Espera a que el servidor envie los datos. Esto puede tardar unos segundos.</Text></Flex> }
+            ) : <Flex direction='column' justify='center' align='center' h='full'><Spinner color='red.500' /> <Text fontFamily={'fantasy'} fontWeight={'light'} mt='10'>Puede tardar unos segundos.</Text></Flex> }
         </DrawerBody>
     )
 }
