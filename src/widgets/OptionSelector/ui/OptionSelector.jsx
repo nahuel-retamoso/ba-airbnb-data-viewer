@@ -22,12 +22,11 @@ function OptionSelector() {
         availability365: 'Availability 365'
     }
 
-
     return (
         <Flex flexWrap='wrap'>
                 {Object.keys(names).map((key) => (
                     <Checkbox key={key} colorScheme="orange" m="10px" size="sm" onChange={() => ChooseReducer(dispatch, key)}>
-                        {names[key]}
+                            {names[key]}
                     </Checkbox>
                 ))}
         </Flex>

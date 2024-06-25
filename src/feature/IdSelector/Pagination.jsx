@@ -9,10 +9,10 @@ function Pagination() {
 
   return (
     <Flex align='center' justify='center' w='full'>
-      <Flex align='center' justify='center' bg='orange.100' borderRadius='5' overflow='hidden' >
-          <Button borderRadius='0' bg='orange.100' _hover={{bg: "orange.200"}} onClick={() => dispatch(paginationDown())}>-</Button>
-          <Text fontWeight='extrabold' px='10'>{page}</Text>
-          <Button _hover={{bg: "orange.200"}} borderRadius='0' bg='orange.100' onClick={() => dispatch(paginationUp())}>+</Button>
+      <Flex fontFamily={'fantasy'} align='center' justify='center' bg='orange.100' borderRadius='5' overflow='hidden' >
+          <Button borderRadius='0' bg='orange.100' fontWeight='light' _hover={{bg: "orange.200"}} onClick={() => dispatch(paginationDown())}>-</Button>
+          <Text fontWeight='light' px='10'>{page}</Text>
+          <Button _hover={{bg: "orange.200"}} fontWeight='light' borderRadius='0' bg='orange.100' onClick={() => dispatch(paginationUp())}>+</Button>
       </Flex>
     </Flex>
   );

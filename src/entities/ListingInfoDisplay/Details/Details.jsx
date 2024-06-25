@@ -8,10 +8,13 @@ function Details ({data, loading, error}) {
 
     return(
         <Flex w='full' h='full'>
-            <Flex py='30px' direction='column' pl='40px' justify='center' w='50%' h='full' color='blackAlpha.800'>
-                <Flex fontSize='md' direction='column' w='full' h='90%'>
-                    <Text color='orange.400'>ID seleccionado: {id}</Text>
-                    <Text mb='3px' textDecoration='underline' color='blackAlpha.700'>Name: {data?.publication.name}</Text>
+            <Flex direction='column' justify='center' w='50%' h='full' color='blackAlpha.700'>
+                <Flex fontSize='md' direction='column' w='full' h='90%' fontWeight='light' justifyItems={''} fontFamily={'fantasy'}>
+                    <Flex>
+                        <Text>ID seleccionado:</Text>
+                        <Text ml='1' color='orange.600'>{id}</Text>
+                    </Flex>
+                    <Text mb='3px'>Name: {data?.publication.name}</Text>
                     <Text mb='3px'>Host ID: {data?.publication.host_id}</Text>
                     <Text mb='3px'>Host Name: {data?.publication.host_name}</Text>
                     <Text mb='3px'>Neighbourhood: {data?.publication.neighbourhood}</Text>
@@ -24,7 +27,7 @@ function Details ({data, loading, error}) {
                     <Text mb='3px'>Calculated Host Listing Count: {data?.publication.calculated_host_listings_count}</Text>
                     <Text mb='3px'>Availability 365: {data?.publication.availability_365}</Text>
                 </Flex>
-                <Flex direction='column' h='10%' w='100%'>
+                <Flex direction='column' h='10%' p='5' w='100%'>
                     {loading ? <Progress size='xs' isIndeterminate /> : (data == undefined || Object.keys(data?.publication).length == 1 ? <Text color='red.200' mt='20px'>Selecciona algun dato que quieras del ID seleccionado</Text> : null )}
                     {error ? <Text color='red.200'>{error}</Text> : null}
                 </Flex>

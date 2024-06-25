@@ -4,7 +4,7 @@ import { PiMapPinLineDuotone } from 'react-icons/pi';
 
 function Map({latitude, longitude}) {
     return (
-        <Flex w='500px' h='full' align='center' justify='center'>
+        <Flex w='full' h='full' align='center' justify='center'>
            
             {latitude && longitude ? (
                     <MapContainer center={[latitude, longitude]} zoom={13} scrollWheelZoom={false} style={{ height: 400, width: "100%", zIndex: 94 }}>
@@ -14,14 +14,14 @@ function Map({latitude, longitude}) {
                         />
                         <Marker position={[latitude, longitude]}>
                             <Popup>
-                                Listing Name
+                                Ubicacion
                             </Popup>
                         </Marker>
                     </MapContainer>
                 ) : (
                     <Flex h='400px' w='full' border='1px' borderColor='blackAlpha.400' justify='center' align='center' bg='orange.100' direction='column'>
                         <Icon h='60px' w='60px' as={PiMapPinLineDuotone} color='orange.500'/>
-                        <Text mt='30px' fontSize='xs' color='orange.400'>Elige la opcion "Location" para mostrar la ubicacion en el mapa</Text>
+                        <Text mt='30px' fontSize='xs' fontFamily={'fantasy'} color='orange.400'>Marca "Location" para el mapa.</Text>
                     </Flex>
                 )}
         </Flex>

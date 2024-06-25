@@ -19,7 +19,7 @@ function IdSelector() {
 
   return (
     <>
-      <Button ref={btnRef} colorScheme='orange' onClick={onOpen}>
+      <Button ref={btnRef} fontFamily={'fantasy'} fontWeight={'light'} colorScheme='orange' onClick={onOpen}>
         Selecciona un ID
       </Button>
       <Drawer
@@ -31,7 +31,7 @@ function IdSelector() {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader borderBottom='2px' borderColor='orange.500' mb='10px'>Selecciona un ID</DrawerHeader>
+          <DrawerHeader borderBottom='2px' fontFamily={'fantasy'} fontWeight={'light'} borderColor='orange.200' mb='10px'>Selecciona un ID</DrawerHeader>
           <IdList />
           <DrawerFooter>
             <Pagination />

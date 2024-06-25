@@ -6,10 +6,10 @@ import ListingInfoDisplay from "../widgets/ListingInfoDisplay/ui/ListingInfoDisp
 function Home() {
 
     return (
-      <Flex bg='blackAlpha.100' w='full' h='100vh' align="center" justify="center" direction="column">
+      <Flex bg='gray.100' h='100vh' align="center" justify="center" direction="column">
         <Flex align="center">
           <Flex w='25%' direction='row'>
-            <Text fontSize="xl" fontWeight="bold" m="20px" mx='15%'>Dataset Airbnb de la Ciudad de Buenos Aires</Text>
+            <Text fontSize="xl" fontWeight="medium" m="20px" mx='15%'>Dataset Airbnb de la Ciudad de Buenos Aires</Text>
           </Flex>
           <Flex w='60%'>
             <OptionSelector />
@@ -18,11 +18,11 @@ function Home() {
             <IdSelector />
           </Flex>
         </Flex>
-        <Flex w='full' h='75vh' border='1px' align='center' justify='center' bg='orange.50'>
+        <Flex w='full' h='75vh' align='center' justify='center' bg='gray.100' p='10'>
           <ListingInfoDisplay/>
         </Flex>
         <Flex>
-          <Text p='30px'>Hecho con React, GraphQL, Apollo, MongoDB y Node</Text>
+          <Text fontSize={'sm'} fontFamily={'fantasy'} textColor={'gray.500'} fontWeight={'light'}>React - GraphQL - Apollo - MongoDB - Node.js</Text>
         </Flex>
       </Flex>
     );

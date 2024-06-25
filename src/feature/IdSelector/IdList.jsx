@@ -1,4 +1,4 @@
-import { DrawerBody, Flex, Spinner, Text } from '@chakra-ui/react'
+import { Button, DrawerBody, Flex, Spinner, Text } from '@chakra-ui/react'
 import { useQuery, gql } from '@apollo/client';
 import { useSelector, useDispatch } from 'react-redux';
 import { setID } from '../../slices/idSlice';
@@ -29,12 +29,12 @@ function IdList() {
         <DrawerBody>
             {data? data.getIds.map((id) => {
                 return (
-                    <Flex _hover={{bg: "orange.50"}} key={id} align='center' justify='center' w='full' p='10px' borderBottom='1px' borderColor='orange.500' onClick={() => onClickId(id)}>
-                        <Text>ID: {id}</Text>
-                    </Flex>
+                    <Button _hover={{bg: "orange.50", shadow: 'base'}} key={id} align='center' justify='center' w='full' h='12' rounded={'none'} bgColor={'whiteAlpha.900'} onClick={() => onClickId(id)}>
+                        <Text fontFamily={'fantasy'} fontSize={'md'} fontWeight={'light'}>ID: {id}</Text>
+                    </Button>
                 )
             }
-            ) : <Flex direction='column' justify='center' align='center' h='full'><Spinner color='red.500' /> <Text mt='10'>Espera a que el servidor envie los datos. Esto puede tardar unos segundos.</Text></Flex> }
+            ) : <Flex direction='column' justify='center' align='center' h='full'><Spinner color='red.500' /> <Text fontFamily={'fantasy'} mt='10'>Espera a que el servidor envie los datos. Esto puede tardar unos segundos.</Text></Flex> }
         </DrawerBody>
     )
 }
