@@ -7,6 +7,7 @@ Framework y librerias usadas:
   - Apollo
   - Redux
   - Leaflet
+  - Node.js
 
 ##### Permite seleccionar los datos que se van a pedir al backend con graphQL. El dataset esta almacenado con mongoDB.
 
